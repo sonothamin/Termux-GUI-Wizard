@@ -28,13 +28,12 @@ case $CHOICE in
 		apt update && apt install x11-repo
 		apt update && apt upgrade -y
 		apt install tigervnc xfce4 xfce4-goodies cowsay -y
-		echo "#!/data/data/com.termux/usr/bin/bash" > gui
-		echo "vncserver -kill :1" >> gui
+		echo "vncserver -kill :1" > gui
 		echo "vncserver :1" >> gui
 		echo 'export DISPLAY=":1"' >> gui
 		echo 'xfce4-session --display=":1"' >> gui
 		chmod +x gui
-		CP gui $PREFIX/bin
+		cp gui $PREFIX/bin/
         clear
           	
             ICONOPTIONS=(1 "Papirus Icon Theme" 
@@ -52,11 +51,15 @@ case $CHOICE in
 		case $ICONCHOICE in
 			1)  clear
                 	apt install papirus-icon-theme   -y                   
+        		cowsay "To change icon theme launch xfce4 and goto /n Applications>>Settings>>Appearance"
+			sleep 3
         		;;
 
 			2)  clear
                 	apt install fluent-icon-theme   -y
-			;;
+			cowsay "To change icon theme launch xfce4 and goto /n Applications>>Settings>>Appearance"
+			sleep 3
+        		;;
 
 		esac      
 
@@ -74,7 +77,8 @@ case $CHOICE in
 		clear
 		case $THEMECHOICE in
 			1)  apt install fluent-gtk-theme -y  
-			    cowsay "To change theme run gui and /n xfconf-query -c xsettings -p /Net/ThemeName -s "Greybird""
+			    cowsay "To change theme launch xfce4 and goto /n Applications>>Settings>>Appearance"
+			    sleep 3
         		;;
 
 			2)  clear
@@ -116,8 +120,8 @@ case $CHOICE in
 	2)	#Mate installation        
         apt update && apt upgrade -y && apt update && apt install x11-repo && apt update && apt upgrade -y 
 		apt install tigervnc mate-* marco	-y
-		echo "#!/data/data/com.termux/usr/bin/bash" > gui
-		echo "vncserver -kill :1" >> gui
+		
+		echo "vncserver -kill :1" > gui
 		echo "vncserver :1" >> gui
 		echo 'export DISPLAY=":1"' >> gui
 		echo 'mate-session --display=":1"' >> gui
@@ -129,8 +133,8 @@ case $CHOICE in
 	3) #LXQt installation
         apt update && apt upgrade -y && apt update && apt install x11-repo && apt update && apt upgrade -y 
 		apt install tigervnc lxqt -y
-		echo "#!/data/data/com.termux/usr/bin/bash" > gui
-		echo "vncserver -kill :1" >> gui
+		
+		echo "vncserver -kill :1" > gui
 		echo "vncserver :1" >> gui
 		echo 'export DISPLAY=":1"' >> gui
 		echo 'lxqt-session --display=":1"' >> gui
