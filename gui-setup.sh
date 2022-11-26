@@ -51,18 +51,17 @@ case $CHOICE in
 		clear
 		case $ICONCHOICE in
 			1)  clear
-                apt install papirus-icon-theme   -y                   
+                	apt install papirus-icon-theme   -y                   
         		;;
 
-			2)
-				clear
-                apt install fluent-icon-theme   -y
-				;;
+			2)  clear
+                	apt install fluent-icon-theme   -y
+			;;
 
 		esac      
 
-        THEMEOPTIONS=(1 "Adwaita GTK Theme" 
-                 2 "Fluent GTK Theme")
+        THEMEOPTIONS=( 1 "Adwaita GTK Theme" 
+                       2 "Fluent GTK Theme")
             
             THEMECHOICE=$(dialog --clear \
 			--backtitle "$BACKTITLE" \
