@@ -51,13 +51,13 @@ case $CHOICE in
 		case $ICONCHOICE in
 			1)  clear
                 	apt install papirus-icon-theme   -y                   
-        		cowsay "To change icon theme launch xfce4 and goto /n Applications>>Settings>>Appearance"
+        		cowsay "To change icon theme launch xfce4 and go to Applications>>Settings>>Appearance"
 			sleep 3
         		;;
 
 			2)  clear
                 	apt install fluent-icon-theme   -y
-			cowsay "To change icon theme launch xfce4 and goto /n Applications>>Settings>>Appearance"
+			cowsay "To change icon theme launch xfce4 and go to Applications>>Settings>>Appearance"
 			sleep 3
         		;;
 
@@ -77,7 +77,7 @@ case $CHOICE in
 		clear
 		case $THEMECHOICE in
 			1)  apt install fluent-gtk-theme -y  
-			    cowsay "To change theme launch xfce4 and goto /n Applications>>Settings>>Appearance"
+			    cowsay "To change theme launch xfce4 and go to Applications>>Settings>>Appearance"
 			    sleep 3
         		;;
 
