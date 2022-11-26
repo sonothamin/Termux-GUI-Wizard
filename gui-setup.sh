@@ -60,8 +60,8 @@ case $CHOICE in
 
 		esac      
 
-        THEMEOPTIONS=( 1 "Adwaita GTK Theme" 
-                       2 "Fluent GTK Theme")
+        THEMEOPTIONS=( 1 "Fluent GTK Theme"
+                       2 "Adwaita GTK Theme")
             
             THEMECHOICE=$(dialog --clear \
 			--backtitle "$BACKTITLE" \
@@ -73,10 +73,11 @@ case $CHOICE in
 
 		clear
 		case $THEMECHOICE in
-			1)  apt install fluent-gtk-theme    -y                     
+			1)  apt install fluent-gtk-theme -y                     
         		;;
 
 			2)  clear
+			    apt install adwaita-icon-theme
                		    cowsay "Adwaita comes pre-installed with xfce4 on Termux."
 			    sleep 3             
 			;;
