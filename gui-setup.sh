@@ -8,10 +8,10 @@ BACKTITLE="Termux GUI Installation"
 TITLE="Select GUI options"
 MENU="Select an option from below"
 
-OPTIONS=(1 "Install XFCE4 Desktop Environment" 
-         2 "Install MATE Desktop Environment"
-         3 "Install LXQt Destop Environment"
-		 4 "Install OpenBox Window manager")
+OPTIONS=( 1 "Install XFCE4 Desktop Environment" 
+          2 "Install MATE Desktop Environment (UNSTABLE)"
+          3 "Install LXQt Destop Environment (UNSTABLE)"
+	  4 "Install OpenBox Window manager (UNSTABLE)")
 
 CHOICE=$(dialog --clear \
 	--backtitle "$BACKTITLE" \
@@ -73,7 +73,8 @@ case $CHOICE in
 
 		clear
 		case $THEMECHOICE in
-			1)  apt install fluent-gtk-theme -y                     
+			1)  apt install fluent-gtk-theme -y  
+			    cowsay "To change theme run gui and /n xfconf-query -c xsettings -p /Net/ThemeName -s "Greybird""
         		;;
 
 			2)  clear
