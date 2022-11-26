@@ -34,10 +34,10 @@ case $CHOICE in
 		echo 'export DISPLAY=":1"' >> gui
 		echo 'xfce4-session --display=":1"' >> gui
 		chmod +x gui
-		mv gui $PREFIX/bin
+		CP gui $PREFIX/bin
         clear
           	
-            OPTIONS=(1 "Papirus Icon Theme" 
+            ICONOPTIONS=(1 "Papirus Icon Theme" 
                      2 "Fluent Icon Theme")
             
             ICONCHOICE=$(dialog --clear \
@@ -61,7 +61,7 @@ case $CHOICE in
 
 		esac      
 
-        OPTIONS=(1 "Adwaita GTK Theme" 
+        THEMEOPTIONS=(1 "Adwaita GTK Theme" 
                  2 "Fluent GTK Theme")
             
             THEMECHOICE=$(dialog --clear \
@@ -78,9 +78,9 @@ case $CHOICE in
         		;;
 
 			2)  clear
-                cowsay "Adwaita comes pre-installed with xfce4 on Termux."
-				sleep 3             
-				;;
+               		    cowsay "Adwaita comes pre-installed with xfce4 on Termux."
+			    sleep 3             
+			;;
 
 		esac   
 
@@ -121,7 +121,7 @@ case $CHOICE in
 		echo 'export DISPLAY=":1"' >> gui
 		echo 'mate-session --display=":1"' >> gui
 		chmod +x gui
-		mv gui $PREFIX/bin
+		cp gui $PREFIX/bin
         clear && cowsay 'Use "gui" command to start a GUI Session. You will have to set a password for the VNC server if you are running for the first time'    
 		;;
 
@@ -134,7 +134,7 @@ case $CHOICE in
 		echo 'export DISPLAY=":1"' >> gui
 		echo 'lxqt-session --display=":1"' >> gui
 		chmod +x gui
-		mv gui $PREFIX/bin
+		cp gui $PREFIX/bin
         cmd=(dialog  --backtitle "$BACKTITLE" --title "Select additional softwares to install" --separate-output --checklist "Select options (multiple options can be selected):" 22 76 16)
                 options=(1 "Geany  -  Fast and lightweight IDE" off    
                          2 "HexChat -  A popular and easy to use graphical IRC client" off
@@ -171,6 +171,13 @@ case $CHOICE in
 		apt update && apt install x11-repo
 		apt update && apt upgrade -y
 		apt install tigervnc openbox pypanel xorg-xsetroot -y
-        clear && cowsay 'Use "gui" command to start a GUI Session. You will have to set a password for the VNC server if you are running for the first time'    
-
+		echo "#!/data/data/com.termux/usr/bin/bash" > gui
+		echo "vncserver -kill :1" >> gui
+		echo "vncserver :1" >> gui
+		echo 'export DISPLAY=":1"' >> gui
+		echo 'openbox-session' >> gui
+		chmod +x gui
+		cp gui $PREFIX/bin
+ 	        clear && cowsay 'Use "gui" command to start a GUI Session. You will have to set a password for the VNC server if you are running for the first time'    
+		;;
 esac
