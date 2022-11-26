@@ -10,8 +10,8 @@ MENU="Select an option from below"
 
 OPTIONS=( 1 "Install XFCE4 Desktop Environment" 
           2 "Install MATE Desktop Environment (UNSTABLE)"
-          3 "Install LXQt Destop Environment (UNSTABLE)"
-	  4 "Install OpenBox Window manager (UNSTABLE)")
+          3 "Install LXQt Destop Environment  (UNSTABLE)"
+	  4 "Install OpenBox Window manager   (UNSTABLE)")
 
 CHOICE=$(dialog --clear \
 	--backtitle "$BACKTITLE" \
@@ -171,7 +171,7 @@ case $CHOICE in
 		apt update && apt upgrade -y 
 		apt update && apt install x11-repo
 		apt update && apt upgrade -y
-		apt install tigervnc openbox pypanel xorg-xsetroot -y
+		apt install tigervnc openbox pypanel xorg-xsetroot cowsay -y
 		echo "#!/data/data/com.termux/usr/bin/bash" > gui
 		echo "vncserver -kill :1" >> gui
 		echo "vncserver :1" >> gui
