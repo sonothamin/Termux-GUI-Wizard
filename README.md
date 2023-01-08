@@ -7,4 +7,4 @@ Simply run the following code on your Termux terminal and follow the onscreen in
 curl -s "https://raw.githubusercontent.com/sonothamin/Termux-GUI-Wizard/main/termux-gui-setup.sh" | bash
 ```
 # Screenshot #
-![Screenshot](Main Menu.png)
+![Screenshot](https://github.com/sonothamin/Termux-GUI-Wizard/raw/main/Main%20Menu.png)
