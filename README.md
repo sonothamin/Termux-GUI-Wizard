@@ -19,19 +19,19 @@ You be asked to set a password when running for the first time. You will also be
 
 Then install a VNC Viewer app from the Play Store. Add a new connection with 0.0.0.0:5901 as the address and "Termux" as the name (you may choose a different name). Set the picture quality to "High". Now open the VNC Viewer app on your phone and open the 0.0.0.0:5901 connection as described in the installation step. When asked, turn off "Warn me every time" warning. You will then have to enter your password and tick the option "Remember Password". Your Desktop Environment will now load.
 
-#How to use#
+# How to use #
 Simply run the following command to start the desktop environment.
 ```
 gui
 ```
 Then go to the VNC viewer app to access the desktop interface.
 
-#Access the GUI from other devices#
+# Access the GUI from other devices #
 You can also access the desktop environment of your device from a different device on the same network, for example: your laptop, pc, tablet or another phone. Just enter the IP address  of your device along with port 5901 on another device's VNC Viewer app and you'll be good to go. If you don't know your device's local IP, run the following command
 '''
 ifconfig  | grep inet | grep broadcast
 '''
-inet is your LAN IP.
+In the output, inet is your LAN IP.
 
 # Screenshot #
 ![Screenshot](https://github.com/sonothamin/Termux-GUI-Wizard/raw/main/Main%20Menu.png)
