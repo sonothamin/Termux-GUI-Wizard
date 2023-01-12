@@ -28,9 +28,9 @@ Then go to the VNC viewer app to access the desktop interface.
 
 # Access the GUI from other devices #
 You can also access the desktop environment of your device from a different device on the same network, for example: your laptop, pc, tablet or another phone. Just enter the IP address  of your device along with port 5901 on another device's VNC Viewer app and you'll be good to go. If you don't know your device's local IP, run the following command
-'''
+```
 ifconfig  | grep inet | grep broadcast
-'''
+```
 In the output, inet is your LAN IP.
 
 # Screenshot #
