@@ -10,7 +10,7 @@ MENU="Select an option from below"
 
 x11(){ 
 	   if dialog --stdout --title "Do you want to switch to a faster mirror?" --backtitle "$BACKTITLE" --yesno "Switching to a faster mirror will speed up the installation process and might make your apt download faster. This program will use the built in pkg tool for this process. Allthough, it is optional" 10 70 ;
-			then pkg --check-mirror update 
+			then clear && pkg --check-mirror update 
 			else echo "OK, See ya sucker." && clear
 	   fi
 	   apt update && apt upgrade -y
