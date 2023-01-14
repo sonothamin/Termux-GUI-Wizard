@@ -20,7 +20,7 @@ x11(){
 	   
 softwares(){
 			 cmd=(dialog  --backtitle "$BACKTITLE" --title "Select additional softwares to install" \
-	        --separate-output --checklist "Select options (multiple options can be selected):" 22 90 16)
+	                      --separate-output --checklist "Select options (multiple options can be selected):" 22 90 16)
              
              options=(1 "Geany  -  Fast and lightweight IDE" off    \
                          2 "HexChat -  A popular and easy to use graphical IRC client" off\
@@ -88,7 +88,7 @@ theme(){
 	    }
 
 icons(){
-		ICONOPTIONS=(1 "Papirus Icon Theme" 
+	    ICONOPTIONS=(1 "Papirus Icon Theme" 
                      2 "Fluent Icon Theme")
             
             ICONCHOICE=$(dialog --clear \
