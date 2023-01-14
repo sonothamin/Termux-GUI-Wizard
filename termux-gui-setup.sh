@@ -118,7 +118,7 @@ icons(){
 xfce(){ 
 		echo "Installing Xfce4"
 		x11
-		apt install xfce4 xfce4-goodies
+		apt install xfce4 xfce4-goodies -y
 		echo "vncserver -kill :1" > gui
 		echo "vncserver :1" >> gui
 		echo 'export DISPLAY=":1"' >> gui
