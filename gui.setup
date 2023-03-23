@@ -1,0 +1,14 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+apt update && apt upgrade -y
+apt install x11-repo
+apt update && apt upgrade
+apt install tigervnc xfce4 xfce4-goodies fluent-* -y
+echo "#!/data/data/com.termux/files/usr/bin/bash" > gui
+echo "vncserver -kill :1" >> gui
+echo "vncserver -list" >> gui
+echo "vncserver :1" >> gui
+echo "vncserver list" >> gui
+echo "xfce4-session --display=:1" >> gui
+chmod +x gui
+mv gui /data/data/com.termux/files/usr/bin/gui
