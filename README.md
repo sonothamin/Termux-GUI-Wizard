@@ -1,5 +1,5 @@
 # Termux-GUI-Wizard #
-This powerful software, written in Bash script, allows you to easily install and set up a stable desktop environment on your Termux Linux environment, with the option of choosing between Xfce, LXQt, MATE, and Openbox.
+This Bash script allows you to easily install and set up a stable desktop environment on your Termux Linux environment, with the option of choosing between Xfce, LXQt, MATE, and Openbox.
 
 The Termux Desktop Installer uses the dialog command to provide a GUI-like installation experience, making the process of setting up a desktop environment on Termux simple and straightforward. 
 
