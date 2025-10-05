@@ -1,3 +1,6 @@
+# ⚠️This project is not maintained and deprecated. 
+
+
 # Termux-GUI-Wizard #
 This Bash script allows you to easily install and set up a stable desktop environment on your Termux Linux environment, with the option of choosing between Xfce, LXQt, MATE, and Openbox.
 
